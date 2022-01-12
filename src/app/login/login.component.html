@@ -1,0 +1,38 @@
+<div class="container-export">
+  
+  <div class="container-login">
+  <div >
+    <img src="../../assets/login-image.PNG" alt="descrição_da_imagem">  
+  </div>
+  
+  <div class="subtitulo-login">
+    Gestão de Eventos
+  </div>
+
+  <mat-card>
+    <mat-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+          <h2>Login</h2>
+          <mat-error *ngIf="!loginValid">
+            The username and password were not recognized
+          </mat-error>
+          <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="username" name="username" required>
+            <mat-error>
+              Please provide a valid email address
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+            <mat-error>
+              Please provide a valid password
+            </mat-error>
+          </mat-form-field>
+          <div class="button-login-entrar">
+            <button  mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Entrar</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+</div>
+</div>
