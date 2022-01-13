@@ -21,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { OktaAuth } from '@okta/okta-auth-js';
 import { LoginComponent } from './login/login.component';
+import { ConfiguracaoEventoComponent } from './configuracao-evento/configuracao-evento.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
+    ConfiguracaoEventoComponent,
     
   ],
   imports: [

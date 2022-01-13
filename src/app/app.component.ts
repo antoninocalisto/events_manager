@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public logout(): void {
-    this._authService.logout('/').pipe(take(1));
+    this._authService.logout('/home').pipe(take(1));
     this.isAuthenticated = false;
   }
 

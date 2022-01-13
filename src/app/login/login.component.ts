@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     private _authService: AuthService,
     private _appComponent :AppComponent
   ) {
-    _appComponent.isAuthenticated = false;
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }
 

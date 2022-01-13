@@ -11,8 +11,17 @@ import {AppComponent} from '../app.component'
 })
 export class HomeComponent implements OnInit {
   public loginValid = true;
-  public username = '';
-  public password = '';
+  public nome = '';
+  public solicitante = '';
+  public org_responsavel = '';
+  public disp_responsavel = '';
+
+  public tip_publi = '';
+  public modalidade_evento = '';
+  public tip_comerci = '';
+  public data_evento = '';
+
+
 
   private _destroySub$ = new Subject<void>();
   private readonly returnUrl: string;
@@ -23,7 +32,7 @@ export class HomeComponent implements OnInit {
     private _authService: AuthService,
     private _appComponent :AppComponent
   ) {
-    _appComponent.isAuthenticated = false;
+    
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }
 
