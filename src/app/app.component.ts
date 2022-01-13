@@ -24,5 +24,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public logout(): void {
     this._authService.logout('/').pipe(take(1));
+    this.isAuthenticated = false;
+  }
+
+  public HomeTitleClick(): void {
+    this.isAuthenticated = true;
   }
 }

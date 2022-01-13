@@ -1,1 +1,95 @@
-<h1>Events Manager</h1>
+<div class=" backgroud-cinza container-export">
+  
+    <div class="container-login">
+        
+        <div class="subtitulo-login fonte-sub-titulo-passos">
+            Configuração de evento
+        </div>
+        <div class="subtitulo-login">
+            <div class="fonte-sub-titulo-passos color-passos" >
+             1 de 2
+            </div>
+            <mat-card>
+                <mat-card-content>
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                        
+                        <h2>Informações do Evento</h2>
+                        <div class="container-passos-campos">
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="NOME DO EVENTO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="SOLICITANTE" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="UNIDADE ORGANIZACIONAL RESPONSÁVEL" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="RESPONSÁVEL PELA DISPONIBILIZAÇÃO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="container-passos-campos centralizar">
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="TIPO DO PÚBLICO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="MODALIDADE DO EVENTO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="TIPOS DE COMERCIALIZAÇÃO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="DATA DO EVENTO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                        </div>
+                     
+                    </form>
+                </mat-card-content>
+            </mat-card>
+            
+            <mat-card>
+                <mat-card-content>
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                        
+                        <h2>Configurar Evento</h2>
+                        <div class="container-passos-campos">
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="NOME DO EVENTO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="SOLICITANTE" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="UNIDADE ORGANIZACIONAL RESPONSÁVEL" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="RESPONSÁVEL PELA DISPONIBILIZAÇÃO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="container-passos-campos centralizar">
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="TIPO DO PÚBLICO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="MODALIDADE DO EVENTO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput  placeholder="TIPOS DE COMERCIALIZAÇÃO" [(ngModel)]="username" name="username" >
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input class="placeholder fonte-mat-form" matInput placeholder="DATA DO EVENTO" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                        </div>
+                        
+                    </form>
+                    <div class="button-login-entrar espaco">
+                        <button  mat-raised-button [disabled]="!loginForm.form.valid" > Salvar </button>
+                        
+                        <button class="espaco" mat-raised-button color="primary" [disabled]="!loginForm.form.valid" > Próximo</button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            
+    </div>
+  </div>
+</div>

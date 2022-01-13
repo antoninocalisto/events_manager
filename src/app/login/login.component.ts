@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { filter, Subject, take, takeUntil } from 'rxjs';
+import {AppComponent} from '../app.component'
 
 @Component({
   selector: 'app-login',
@@ -19,8 +20,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _appComponent :AppComponent
   ) {
+    _appComponent.isAuthenticated = false;
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }
 
@@ -33,7 +36,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit(): void {
-    this._router.navigateByUrl('/');
-    
+    this._appComponent.isAuthenticated = true;
+    this._router.navigateByUrl('/home');
   }
 }
