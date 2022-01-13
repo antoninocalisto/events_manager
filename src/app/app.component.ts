@@ -15,9 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private _authService: AuthService) { }
 
   public ngOnInit(): void {
-    this._authService.isAuthenticated$.pipe(
-      takeUntil(this._destroySub$)
-    ).subscribe((isAuthenticated: boolean) => this.isAuthenticated = isAuthenticated);
+   
   }
 
   public ngOnDestroy(): void {
